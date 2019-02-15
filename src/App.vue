@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <Navigation />
+    <div id="foreground_decoration">
+      <DecorationHorizontalBars />
     </div>
-    <router-view/>
+    <div id="background_decoration">
+      <DecorationVerticalBars />
+    </div>
+    <div id="content">
+      <router-view/>
+    </div>
   </div>
 </template>
 <script>
-  import Navigation from '@/components/Navigation.vue'
+  import DecorationHorizontalBars from '@/components/DecorationHorizontalBars.vue'
+  import DecorationVerticalBars from '@/components/DecorationVerticalBars.vue'
   export default {
     components: {
-      Navigation
+      DecorationHorizontalBars,
+      DecorationVerticalBars,
     }
   }
 </script>
@@ -23,7 +30,19 @@
   // text-align: center;
   // color: #2c3e50;
 }
-// #nav {
+#background_decoration {
+  z-index: -100;
+  position: relative;
+}
+#content {
+  z-index: -10;
+  position: relative;
+}
+#foreground_decoration {
+  z-index: 100;
+  position: relative;
+}
+// #decoration {
 //   padding: 30px;
 //   a {
 //     font-weight: bold;

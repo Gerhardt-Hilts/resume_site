@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Jumbotron />
-      <div style="height: 1000px;"></div>
+      <!-- <div style="height: 1000px;"></div> -->
   </div>
 </template>
 
