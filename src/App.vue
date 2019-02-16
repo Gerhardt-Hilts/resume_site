@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="foreground_decoration">
-      <DecorationHorizontalBars />
+      <DecorationHorizontalBars style="position: absolute; z-index: 100; width: 100%;"/>
     </div>
     <div id="background_decoration">
       <DecorationVerticalBars />
@@ -32,15 +32,17 @@
 }
 #background_decoration {
   z-index: -100;
-  position: relative;
+  position: fixed;
+  top: 0;
 }
 #content {
-  z-index: -10;
+  z-index: 0;
   position: relative;
 }
 #foreground_decoration {
   z-index: 100;
-  position: relative;
+  // position: fixed;
+  // top: 0;
 }
 // #decoration {
 //   padding: 30px;

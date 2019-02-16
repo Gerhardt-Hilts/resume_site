@@ -12,8 +12,8 @@
 </script>
 <style>
   .decoration {
-    position: fixed;
-    width: 100vw;
+    /* position: fixed; */
+    /* width: 100vw; */
   }
   .top_bar {
     height: 25px;
