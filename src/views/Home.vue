@@ -7,7 +7,7 @@
           <div class="column">
             <h1 class="font h1">Gerhardt Hilts</h1>
             <p class="font subtext">FULL STACK DEVELOPER<p>
-            <p class="font text bio">I'm fantastic at this. You want me on your team. I will make your life easier. Your pipeline smoother. Your frontend prettier. Your backend sharper. I've done it before I'll do it again no sweat. There is always room for improvement. I'm the guy that finds out how to improve on perfection. Haven't reached a perfect product yet? I will take you there. Throw me at that horrifyingly complex project. I'll square it away so smoothly, you'll forget other shapes exist!
+            <p class="font text bio">You want me on your team. I will make your life easier. Your pipeline smoother. Your frontend prettier. Your backend clean. I've done it before and I'll do it again, no sweat. There is always room for improvement. I'm the guy that finds out how to improve on perfection. Haven't reached a perfect product yet? I will take you there. Throw me at that horrifyingly complex project. I'll square it away so smoothly, you'll forget other shapes exist!
             So why is it that I'm so conclusive on my abilities?
             If you don't know what to think about what I've done, I'll tell you what to think. "WOW! This guy is in control. He's got it down. I'm bringing this guy on board asap!"
             Look at all this stuff I've done.</p>
@@ -46,7 +46,8 @@
               <li class="font">Angular 2-7</li>
               <li class="font">ReactJS</li>
               <li class="font">PreactJS</li>
-              <li class="font">ChooJS</li>
+              <li class="font">Redux</li>
+              <li class="font">D3JS</li>
               <li class="font">Shell Script</li>
               <li class="font">Haxe</li>
               <li class="font">Ionic 1-3</li>
@@ -77,15 +78,46 @@
     <div class="content demo">
       <div class="demo_content">
         <div class="demo_column">
-          <button class="button button_one blue_form">Button</button>
-          <button class="button button_one green_form">Button</button>
-          <button class="button button_one red_form">Button</button>
-          <button class="button button_two blue_form">Button</button>
-          <button class="button button_two green_form">Button</button>
-          <button class="button button_two red_form">Button</button>
-          <button class="button button_three blue_form blue_form_two">Button</button>
-          <button class="button button_three green_form green_form_two">Button</button>
-          <button class="button button_three red_form red_form_two">Button</button>
+          <div class="form_element_container"><button class="button button_one blue_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_one green_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_one red_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_two blue_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_two green_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_two red_form">Button</button></div>
+          <div class="form_element_container"><button class="button button_three blue_form blue_form_two">Button</button></div>
+          <div class="form_element_container"><button class="button button_three green_form green_form_two">Button</button></div>
+          <div class="form_element_container"><button class="button button_three red_form red_form_two">Button</button></div>
+        </div>
+        <div class="demo_column">
+          <div class="form_element_container"><input class="input input_one blue_form" /></div>
+          <div class="form_element_container"><input class="input input_one green_form" /></div>
+          <div class="form_element_container"><input class="input input_one red_form" /></div>
+          <div class="form_element_container"><input class="input input_two blue_form" /></div>
+          <div class="form_element_container"><input class="input input_two green_form" /></div>
+          <div class="form_element_container"><input class="input input_two red_form" /></div>
+          <div class="form_element_container"><input class="input input_three blue_form blue_form_two" /></div>
+          <div class="form_element_container"><input class="input input_three green_form green_form_two" /></div>
+          <div class="form_element_container"><input class="input input_three red_form red_form_two" /></div>
+        </div>
+        <div class="demo_column">
+          <div class="form_element_container"><input class="form_blue_checkbox_one" id="styled-checkbox-1" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-1">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_green_checkbox_one" id="styled-checkbox-2" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-2">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_red_checkbox_one" id="styled-checkbox-3" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-3">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_blue_checkbox_two" id="styled-checkbox-4" type="checkbox" value="value1">
+          <label class="form_font form_blue_checkbox_label" for="styled-checkbox-4">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_green_checkbox_two" id="styled-checkbox-5" type="checkbox" value="value1">
+          <label class="form_font form_green_checkbox_label" for="styled-checkbox-5">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_red_checkbox_two" id="styled-checkbox-6" type="checkbox" value="value1">
+          <label class="form_font form_red_checkbox_label" for="styled-checkbox-6">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_blue_checkbox_three" id="styled-checkbox-7" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-7">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_green_checkbox_three" id="styled-checkbox-8" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-8">Checkbox</label></div>
+          <div class="form_element_container"><input class="form_red_checkbox_three" id="styled-checkbox-9" type="checkbox" value="value1">
+          <label class="form_font" for="styled-checkbox-9">Checkbox</label></div>
         </div>
       </div>
     </div>
@@ -119,11 +151,20 @@ export default {
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Muli');
   @import url('https://fonts.googleapis.com/css?family=Catamaran|Source+Sans+Pro');
+
+  textarea, select, input, button { outline: none; }
   .demo_column {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+  }
+  .form_element_container {
+    height: 50px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .button {
     min-width: 165px;
@@ -134,8 +175,7 @@ export default {
     // justify-content: center;
     // align-items: center;
     // text-align: center;
-    margin: 10px;
-    padding: 0;
+    padding: 0px;
     background: none;
     border: none;
   }
@@ -163,21 +203,39 @@ export default {
   }
   .blue_form {
     background-color: #4FB6BB;
-    color: white;
+    color: 1;
+    &:hover {
+      background-color: #79D2D6;
+    }
+    &:active {
+      background-color: #2F999E;
+    }
   }
   .green_form {
     background-color: #C2F366;
     color: black;
+    &:hover {
+      background-color: #D3F88C;
+    }
+    &:active {
+      background-color: #B4EE46;
+    }
   }
   .red_form {
     background-color: #FF6F6B;
     color: white;
+    &:hover {
+      background-color: #FF9390;
+    }
+    &:active {
+      background-color: #E24743;
+    }
   }
   .demo_content {
     position: absolute;
     background-color: #fff;
     border-radius: 15px;
-    width: 45vw;
+    width: 650px;
     height: 70vh;
     padding: 20px;
     display: flex;
@@ -220,6 +278,9 @@ export default {
   .font {
     font-family: Source Sans Pro, Catamaran, 'Avenir', Helvetica, Arial, sans-serif;
     line-height: 28px;
+  }
+  .form_font {
+    font-family: Source Sans Pro, Catamaran, 'Avenir', Helvetica, Arial, sans-serif;
   }
   .h1 {
     font-size: 36px;
@@ -286,4 +347,636 @@ export default {
   li {
     margin-left: 40px;
   }
+
+  .input {
+    border: none;
+    padding: 5px;
+  }
+  .input_one {
+    border-radius: 10px;
+    border: solid 1px #999;
+  }
+  .input_two {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+  }
+  .input_three {
+    background-color: #fff;
+    color: #000;
+  }
+  .form_blue_checkbox_label {
+    border: solid 1px #4FB6BB;
+    padding-right: 10px;
+  }
+  .form_green_checkbox_label {
+    border: solid 1px #C2F366;
+  }
+  .form_red_checkbox_label {
+    border: solid 1px #FF6F6B;
+  }
+  .form_blue_checkbox_one {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 0, 0, .1);
+    }
+
+    // Box hover
+    &:hover + label:before {
+      background: #4FB6BB;
+    }
+
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: #4FB6BB;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 19px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+  .form_green_checkbox_one {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    // Box hover
+    &:hover + label:before {
+      background: #C2F366;
+    }
+
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: #C2F366;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 19px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+  .form_red_checkbox_one {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    // Box hover
+    &:hover + label:before {
+      background: #FF6F6B;
+    }
+
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: #FF6F6B;
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 19px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+  .form_blue_checkbox_two {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #4FB6BB;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #4FB6BB;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+  .form_green_checkbox_two {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #C2F366;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #C2F366;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+  .form_red_checkbox_two {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #FF6F6B;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #FF6F6B;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+  .form_blue_checkbox_three {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #4FB6BB;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #4FB6BB;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+  .form_green_checkbox_three {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #C2F366;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #C2F366;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+  .form_red_checkbox_three {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    border-radius: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #FF6F6B;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #FF6F6B;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
 </style>

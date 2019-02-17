@@ -7,17 +7,19 @@
       <DecorationVerticalBars />
     </div>
     <div id="content">
-      <router-view/>
+      <Home />
     </div>
   </div>
 </template>
 <script>
   import DecorationHorizontalBars from '@/components/DecorationHorizontalBars.vue'
   import DecorationVerticalBars from '@/components/DecorationVerticalBars.vue'
+  import Home from '@/views/Home.vue';
   export default {
     components: {
       DecorationHorizontalBars,
       DecorationVerticalBars,
+      Home
     }
   }
 </script>
