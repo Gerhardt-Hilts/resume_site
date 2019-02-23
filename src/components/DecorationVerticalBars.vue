@@ -28,13 +28,16 @@
     </div>
   </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
+  @import "@/styles/constants.scss";
+
   .decoration {
-    position: fixed;
+    // position: fixed;
     width: 100vw;
+    margin: 0;
   }
   .drop_bars {
-    height: 500px;
+    height: $jumbotron_height;
     display: flex;
     align-items: stretch;
     flex: 3 0px;
@@ -46,25 +49,31 @@
     justify-content: space-around;
   }
   .vertical_bar_width {
-    width: 1.4vw;
+    width: $bar_vertical_size;
   }
   .vertical_bar_length_one {
-    height: 175px;
+    height: calc(#{$jumbotron_height} * .35);
+    // 0.35
   }
   .vertical_bar_length_two {
-    height: 250px;
+    height: calc(#{$jumbotron_height} * .5);
+    // 0.5
   }
   .vertical_bar_length_three {
-    height: 365px;
+    height: calc(#{$jumbotron_height} * .62);
+    // 0.62
   }
   .vertical_bar_length_four {
-    height: 310px;
+    height: calc(#{$jumbotron_height} * .73);
+    // 0.73
   }
   .vertical_bar_length_five {
-    height: 500px;
+    height: calc(#{$jumbotron_height} * 1);
+    // 1
   }
   .vertical_bar_length_six {
-    height: 275px;
+    height: calc(#{$jumbotron_height} * .55);
+    // 0.55
   }
   .vertical_bar_blue {
     background-color: #4FB6BB;

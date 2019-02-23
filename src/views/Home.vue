@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
-    <Jumbotron />
-    <div class="content">
-      <div class="column main">
+  <div>
+    <!-- <Jumbotron /> -->
+    <!-- <div class="content"> -->
+      <!-- <div class="column main">
         <div class="row">
           <div class="column">
             <h1 class="font h1">Gerhardt Hilts</h1>
@@ -25,9 +25,9 @@
               Assisted with the systems administration. SSHing into a development VPS and staying within the bounds of the secure environment that was created.
               Overall, made massive improvements to the project. Reaching the desires of my project leader, as well as working independently to bring the project to heights and levels it could never have dreamed of on its own.
             </p>
-          </div>
-        </div>
-        <div class="row">
+          </div> -->
+        <!-- </div> -->
+        <!-- <div class="row">
           <div class="column internal_one">
             <h2 class="font h2">Technologies</h2>
           </div>
@@ -72,10 +72,10 @@
               <li class="font">Stencil</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="content demo">
+        </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="content demo">
       <div class="demo_content">
         <div class="demo_column">
           <div class="form_element_container"><button class="button button_one blue_form">Button</button></div>
@@ -120,38 +120,34 @@
           <label class="form_font" for="styled-checkbox-9">Checkbox</label></div>
         </div>
       </div>
-    </div>
-    <div class="content bottom">
+    </div> -->
+    <!-- <div class="content bottom">
       <div class="contact">
         <h1 class="font h1">Hire your fullstack developer of choice today!</h1>
         <p class="font light">Come say, hello world!</p>
         <p class="font light">405-532-9839 | gerhardthilts@gmail.com | gerhardthilts.com</p>
       </div>
-    </div>
-    <div class="footer">
+    </div> -->
+    <!-- <div class="footer">
       <DecorationHorizontalBars style="z-index: 100;"/>
-    </div>
+    </div> -->
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-import Jumbotron from '@/components/Jumbotron.vue';
-import DecorationHorizontalBars from '@/components/DecorationHorizontalBars';
+// import Jumbotron from '@/components/Jumbotron.vue';
+// import DecorationHorizontalBars from '@/components/DecorationHorizontalBars';
 
 export default {
   name: 'home',
   components: {
-    Jumbotron,
-    DecorationHorizontalBars
+    // Jumbotron,
+    // DecorationHorizontalBars
   }
 }
 </script>
-<style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Muli');
-  @import url('https://fonts.googleapis.com/css?family=Catamaran|Source+Sans+Pro');
-
+<style scoped lang="scss">
   textarea, select, input, button { outline: none; }
   .demo_column {
     display: flex;
@@ -279,6 +275,12 @@ export default {
     font-family: Source Sans Pro, Catamaran, 'Avenir', Helvetica, Arial, sans-serif;
     line-height: 28px;
   }
+  @media screen and (max-width: 650px) {
+    .font {
+      line-height: 18px;
+      margin-top: 10px;
+    }
+  }
   .form_font {
     font-family: Source Sans Pro, Catamaran, 'Avenir', Helvetica, Arial, sans-serif;
   }
@@ -304,12 +306,19 @@ export default {
     margin-top: 10px;
     margin-bottom: 70px;
   }
-  .main {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 70vw;
-    padding: 5vw;
-    background-color: rgba(255, 255, 255, 0.75);
+  // .main {
+  //   margin-top: 100px;
+  //   margin-bottom: 100px;
+  //   background-color: rgba(255, 255, 255, 0.75);
+  // }
+  @media screen and (min-width: 650px) {
+    .main {
+      padding: 5vw;
+      width: 70vw;
+    }
+    .text {
+      padding: 0px;
+    }
   }
   .subtext {
     font-size: 20px;
@@ -319,6 +328,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
   }
   .column {
     display: flex;
@@ -335,11 +345,24 @@ export default {
   .internal_two {
     width: 70%;
   }
+  @media screen and (max-width: 650px) {
+    .internal_two {
+      width: inherit;
+    }
+    .column {
+      margin-top: 20px;
+    }
+    .internal_three {
+      width: inherit;
+    }
+  }
   .internal_three {
     width: 35%;
   }
-  .text {
-    padding: 20px;
+  @media screen and (min-width: 650px) {
+    .text {
+      padding: 20px;
+    }
   }
   ul {
     list-style: dot;
@@ -977,6 +1000,43 @@ export default {
       4px -6px 0 white,
       4px -8px 0 white;
     transform: rotate(45deg);
+  }
+}
+@media screen and (max-width: 650px) {
+    .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // overflow: hidden;
+  }
+  .demo_content {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .inline {
+    display: block;
+  }
+@media screen and (min-width: 650px) {
+  .main {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+  .row {
+    width: 50vw;
+    padding: 0;
+  }
+  .h2 {
+    padding: 0;
+  }
+  .h3 {
+    padding: 0;
+    width: 50vw;
+  }
+  .text {
+    width: inherit;
   }
 }
 </style>

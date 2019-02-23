@@ -1,0 +1,72 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Source+Sans+Pro');
+
+/* constants */
+
+// TEXT
+$fonts: Source Sans Pro, Catamaran, 'Avenir', Helvetica, Arial, sans-serif;
+$line_height: 28px;
+$letter_spacing: 5px;
+$font_size: 18px;
+
+// COLORS
+// _blue
+$blue_lightest: #B0EAED;
+$blue_lighter: #79D2D6;
+$blue_base: #4FB6BB;
+$blue_darker: #2F999E;
+$blue_darkest: #158A8F;
+// _green
+$green_lightest: #E5FCBB;
+$green_lighter: #D3F88C;
+$green_base: #C2F366;
+$green_darker: #B4EE46;
+$green_darkest: #9ADB1F;
+// _red
+$red_lightest: #FFBCBA;
+$red_lighter: #FF9390;
+$red_base: #FF6F6B;
+$red_darker: #E24743;
+$red_darkest: #C0231F;
+
+// decorations sizing
+$bar_horizontal_size: 2.4vh;
+$bar_vertical_size: 1.4vw;
+$bar_offset: calc(#{$bar_horizontal_size} * 2);
+
+// responsive page, media queries
+$responsive_min_height: calc(100vh - #{$bar_offset});
+$responsive_min_width: 1000px;
+
+// header sizing
+$jumbotron_width: inherit;
+$jumbotron_height: calc(50vh - #{$bar_offset});
+
+.font {
+  font-family: $fonts;
+  line-height: $line_height;
+}
+.h1 {
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 5px;
+}
+.h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
+.h3 {
+  font-weight: 300;
+  font-size: 20px;
+}
+.h4 {
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.light {
+  text-decoration: none;
+  color: rgba(26, 26, 26, .75);
+  font-size: 15px;
+}
